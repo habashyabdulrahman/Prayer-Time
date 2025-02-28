@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواقيت الصلاة</title>
+
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Moment.js مع دعم اللغة العربية -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ar-kw.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row my-4 text-center">
+            <div class="col-12">
+                <h1 class="display-4 mb-3">مواقيت الصلاة</h1>
+                <p id="hijri-date" class="hijri-date mb-0"></p>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-4">
+            <div class="col-md-6 mb-3 mb-md-0 text-center">
+                <div class="card bg-transparent text-white border-light">
+                    <div class="card-body">
+                        <h2 class="fs-3">الإسكندرية</h2>
+                        <p id="current-date-time" class="display-6 mb-1 fs-2"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="card bg-transparent text-white border-light">
+                    <div class="card-body">
+                        <h5 class="card-title fs-4">متبقي حتى صلاة <span id="next-prayer">-</span></h5>
+                        <p id="remaining-time" class="display-6 mb-0">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content" class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
+            <!-- سيتم ملء هذا القسم بواسطة JavaScript -->
+        </div>
+
+        <footer class="text-center mt-5 pb-3">
+            <p class="text-white-50">مواقيت الصلاة © 2025</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- كود JavaScript الخاص بنا -->
+    <script src="main.js"></script>
+</body>
+</html>

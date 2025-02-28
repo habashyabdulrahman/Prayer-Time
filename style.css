@@ -1,0 +1,42 @@
+body {
+  background-color: #242424;
+  color: #fff;
+}
+
+.card-img,
+.card-img-top {
+  border-top-left-radius: calc(1rem - 1px);
+  border-top-right-radius: calc(1rem - 1px);
+}
+.card-img,
+.card-img-bottom {
+  border-bottom-right-radius: calc(1rem - 1px);
+  border-bottom-left-radius: calc(1rem - 1px);
+}
+
+.fs-max {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.prayer-name {
+  font-weight: bold;
+}
+.hijri-date {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.bg-success {
+    background-color: #6463638a !important;
+}
