@@ -1,5 +1,5 @@
 const apiUrl =
-  "https://api.aladhan.com/v1/timingsByCity?country=EG&city=Alexandria";
+  "https://api.aladhan.com/v1/timingsByCity?country=EG&city=Burj Mighayzil";
 
 // تعريف لغة moment.js للعربية
 moment.locale("ar");
