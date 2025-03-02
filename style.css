@@ -38,5 +38,6 @@ body {
 }
 
 .bg-success {
-    background-color: #6463638a !important;
+    background-color: transparent !important;
+    border-color: #6463638a ;
 }
