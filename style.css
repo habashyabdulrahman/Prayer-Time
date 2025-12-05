@@ -1,17 +1,12 @@
+/*==================================*/
+/* 1. Base Styles & Fonts           */
+/*==================================*/
 body {
-  background-color: #242424;
+  /* خلفية زرقاء داكنة جداً (Modern Dark Theme) */
+  background-color: #0A192F; 
   color: #fff;
-}
-
-.card-img,
-.card-img-top {
-  border-top-left-radius: calc(1rem - 1px);
-  border-top-right-radius: calc(1rem - 1px);
-}
-.card-img,
-.card-img-bottom {
-  border-bottom-right-radius: calc(1rem - 1px);
-  border-bottom-left-radius: calc(1rem - 1px);
+  font-family: "Tajawal", sans-serif;
+  min-height: 100vh;
 }
 
 .fs-max {
@@ -19,25 +14,63 @@ body {
   margin-bottom: 0;
 }
 
-body {
-  font-family: "Tajawal", sans-serif;
-}
-.card {
-  transition: all 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.prayer-name {
-  font-weight: bold;
-}
 .hijri-date {
   font-size: 1.2rem;
   opacity: 0.8;
+  color: #64ffda; /* لون التمييز النيون */
 }
 
+/* تنسيق بطاقات الوقت والتاريخ في الأعلى */
+.card {
+    background-color: #172A45 !important; /* لون أفتح قليلاً من الخلفية */
+    border: 1px solid rgba(100, 255, 218, 0.1); /* حدود خفيفة بلون النيون */
+    border-radius: 1.5rem !important;
+    transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(100, 255, 218, 0.15); /* ظل بلون النيون */
+}
+
+/*==================================*/
+/* 2. Prayer Cards Styles           */
+/*==================================*/
+
+/* البطاقات المخصصة لأوقات الصلاة (تنسيق مختلف قليلاً) */
+.card-modern {
+    background-color: #112240 !important; /* لون أغمق قليلاً للبطاقات الرئيسية */
+    border: 2px solid transparent !important; /* إزالة الحدود */
+    border-radius: 1rem !important;
+    transition: all 0.4s ease;
+}
+
+/* تنسيق الأيقونات الجديدة */
+.prayer-icon {
+    font-size: 4rem; 
+    margin-bottom: 0.5rem;
+    color: #64ffda; /* لون النيون السماوي */
+    display: block; 
+    height: 100px; /* لتحديد الارتفاع بوضوح */
+    line-height: 100px;
+}
+.fs-3 {
+    font-weight: bold;
+}
+
+/*==================================*/
+/* 3. Current Prayer Highlight (Neon Glow) */
+/*==================================*/
+
+/* التمييز باللون النيون المتوهج (بدلاً من bg-success) */
+.bg-active {
+    background-color: #112240 !important;
+    border: 2px solid #64ffda !important; /* الإطار النيون */
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.6); /* التوهج */
+    transform: scale(1.03); /* تكبير بسيط للفت الانتباه */
+}
+
+/* إلغاء أي تأثيرات أخرى لـ bg-success لمنع التداخل */
 .bg-success {
     background-color: transparent !important;
-    border-color: #6463638a ;
+    border-color: transparent;
 }
