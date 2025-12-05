@@ -5,12 +5,12 @@ const apiUrl =
 moment.locale("ar");
 
 // صور مناسبة لكل صلاة
-const prayerImages = {
-  Fajr: "assets/images/1.png",
-  Dhuhr: "assets/images/2.png",
-  Asr: "assets/images/3.png",
-  Maghrib: "assets/images/4.png",
-  Isha: "assets/images/5.png",
+const prayerIcons = {
+  Fajr: "bi-moon-stars", // الهلال والنجوم للفجر
+  Dhuhr: "bi-sun", // الشمس للظهر
+  Asr: "bi-cloud-sun", // الغيوم والشمس للعصر (وقت المساء)
+  Maghrib: "bi-sunset", // غروب الشمس للمغرب
+  Isha: "bi-moon", // القمر للعشاء
 };
 
 // أسماء الصلوات بالعربية
@@ -90,6 +90,7 @@ const getTimings = async () => {
     const data = await res.json();
     const timings = data.data.timings;
     const date = data.data.date;
+    console.table(timings);
 
     // عرض معلومات التاريخ الهجري
     document.getElementById(
@@ -105,15 +106,12 @@ const getTimings = async () => {
 
         return `
           <div class="col">
-            <div class="card text-white ${
-              isCurrentPrayer ? "bg-success" : "bg-transparent"
-            } rounded border-2 h-100">
+            <div class="card card-modern text-white ${
+              isCurrentPrayer ? "bg-active" : ""
+            } rounded-4 h-100"> 
               <div class="card-body text-center">
-                <img class="card-img mb-2" src="${
-                  prayerImages[key] || "assets/images/default.jpg"
-                }" alt="${
-          arabicNames[key]
-        }" style="height: 150px;  object-fit: cover; border-radius: 10px;">
+                <i class="bi ${prayerIcons[key]} prayer-icon"></i> 
+                
                 <h5 class="fs-3 mt-2">${arabicNames[key]}</h5>
                 <p class="fs-4 mb-0">${time}</p>
               </div>
